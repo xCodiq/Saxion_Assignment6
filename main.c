@@ -105,7 +105,7 @@ CalculationResult divideValues(float first, float second) {
  * @return the outcome of the equation
  */
 CalculationResult modulusValues(float first, float second) {
-    if (first == 0) return createCalculationResult(MODULO_ZERO, -1, '?');
+    if (second == 0) return createCalculationResult(MODULO_ZERO, -1, '?');
 
     float output = (float) ((int) first % (int) second);
     return createCalculationResult(SUCCESS, output, '%');
@@ -213,7 +213,7 @@ int main() {
                 break;
 
             case MODULO_ZERO:
-                printf("!! ERROR: You are not allowed to get the modulo of 0 !!\n");
+                printf("!! ERROR: You are not allowed to do the modulus of 0 !!\n");
                 break;
 
             case EXIT:
